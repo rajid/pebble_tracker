@@ -1,0 +1,101 @@
+{
+  "uuid": "ff163fd8-205b-49e6-9989-2b48c59d7211",
+  "shortName": "tracker",
+  "longName": "tracker",
+  "capabilities": [
+    "configurable"
+  ],
+  "companyName": "raj",
+  "versionCode": 1,
+  "versionLabel": "2.0",
+  "watchapp": {
+    "watchface": false
+  },
+  "appKeys": {
+    "proj1": 0,
+    "proj1_run": 1,
+    "proj1_start": 2,
+    "proj2": 3,
+    "proj2_run": 4,
+    "proj2_start": 5,
+    "proj3": 6,
+    "proj3_run": 7,
+    "proj3_start": 8,
+    "proj4": 9,
+    "proj4_run": 10,
+    "proj4_start": 11,
+    "proj5": 12,
+    "proj5_run": 13,
+    "proj5_start": 14,
+    "name1": 15,
+    "name2": 16,
+    "name3": 17,
+    "name4": 18,
+    "name5": 19,
+    "hour1": 20,
+    "hour2": 21,
+    "hour3": 22,
+    "hour4": 23,
+    "hour5": 24,
+    "min1": 25,
+    "min2": 26,
+    "min3": 27,
+    "min4": 28,
+    "min5": 29,
+
+    "p6": 30,
+    "p6_run": 31,
+    "p6_start": 32,
+    "p7": 33,
+    "p7_run": 34,
+    "p7_start": 35,
+    "p8": 36,
+    "p8_run": 37,
+    "p8_start": 38,
+    "p9": 39,
+    "p9_run": 40,
+    "p9_start": 41,
+    "p10": 42,
+    "p10_run": 43,
+    "p10_start": 44,
+
+    "n6": 45,
+    "n7": 46,
+    "n8": 47,
+    "n9": 48,
+    "n10": 49,
+
+    "h6": 50,
+    "h7": 51,
+    "h8": 52,
+    "h9": 53,
+    "h10": 54,
+
+    "m5": 55,
+    "m5": 56,
+    "m5": 57,
+    "m5": 58,
+    "m5": 59
+  },
+  "resources": {
+    "media": [
+      {
+        "menuIcon": true,
+        "type": "png",
+        "name": "IMAGE_MENU_ICON",
+        "file": "images/menu_icon_tracker.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_BLUETOOTH",
+        "file": "images/bluetooth.png"
+      }
+    ]
+  },
+  "targetPlatforms": [
+    "aplite",
+    "basalt",
+    "chalk"
+  ],
+  "sdkVersion": "3"
+}
