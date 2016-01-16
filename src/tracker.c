@@ -327,7 +327,6 @@ next_project (int p_num, int direction)
 
 static void
 up_click_handler(ClickRecognizerRef recognizer, void *context) {
-    int start_p = cur_p;
 
     cur_p = next_project(cur_p, 1);
 
@@ -336,7 +335,6 @@ up_click_handler(ClickRecognizerRef recognizer, void *context) {
 
 static void
 down_click_handler(ClickRecognizerRef recognizer, void *context) {
-    int start_p = cur_p;
 
     cur_p = next_project(cur_p, -1);
 
