@@ -595,75 +595,76 @@ init (void) {
   app_message_register_inbox_received(handle_msg_received);
   app_message_register_inbox_dropped(handle_msg_dropped);
     /* Calculate size of buffer needed */
-    dict_size = dict_calc_buffer_size(60,
-                                      sizeof(uint32_t), /* proj_time_val */
-                                      sizeof(uint32_t), /* proj_time_val */
-                                      sizeof(uint32_t), /* proj_time_val */
-                                      sizeof(uint32_t), /* proj_time_val */
-                                      sizeof(uint32_t), /* proj_time_val */
-                                      sizeof(uint32_t), /* proj_time_val */
-                                      sizeof(uint32_t), /* proj_time_val */
-                                      sizeof(uint32_t), /* proj_time_val */
-                                      sizeof(uint32_t), /* proj_time_val */
-                                      sizeof(uint32_t), /* proj_time_val */
-                                      sizeof(uint32_t), /* proj_run_val */
-                                      sizeof(uint32_t), /* proj_run_val */
-                                      sizeof(uint32_t), /* proj_run_val */
-                                      sizeof(uint32_t), /* proj_run_val */
-                                      sizeof(uint32_t), /* proj_run_val */
-                                      sizeof(uint32_t), /* proj_run_val */
-                                      sizeof(uint32_t), /* proj_run_val */
-                                      sizeof(uint32_t), /* proj_run_val */
-                                      sizeof(uint32_t), /* proj_run_val */
-                                      sizeof(uint32_t), /* proj_run_val */
-                                      sizeof(uint32_t), /* proj_start_val */
-                                      sizeof(uint32_t), /* proj_start_val */
-                                      sizeof(uint32_t), /* proj_start_val */
-                                      sizeof(uint32_t), /* proj_start_val */
-                                      sizeof(uint32_t), /* proj_start_val */
-                                      sizeof(uint32_t), /* proj_start_val */
-                                      sizeof(uint32_t), /* proj_start_val */
-                                      sizeof(uint32_t), /* proj_start_val */
-                                      sizeof(uint32_t), /* proj_start_val */
-                                      sizeof(uint32_t), /* proj_start_val */
-                                      MAX_PROJ_NAME_LEN, /* proj_names */
-                                      MAX_PROJ_NAME_LEN, /* proj_names */
-                                      MAX_PROJ_NAME_LEN, /* proj_names */
-                                      MAX_PROJ_NAME_LEN, /* proj_names */
-                                      MAX_PROJ_NAME_LEN, /* proj_names */
-                                      MAX_PROJ_NAME_LEN, /* proj_names */
-                                      MAX_PROJ_NAME_LEN, /* proj_names */
-                                      MAX_PROJ_NAME_LEN, /* proj_names */
-                                      MAX_PROJ_NAME_LEN, /* proj_names */
-                                      MAX_PROJ_NAME_LEN, /* proj_names */
-                                      sizeof(uint32_t), /* proj_hour_val */
-                                      sizeof(uint32_t), /* proj_hour_val */
-                                      sizeof(uint32_t), /* proj_hour_val */
-                                      sizeof(uint32_t), /* proj_hour_val */
-                                      sizeof(uint32_t), /* proj_hour_val */
-                                      sizeof(uint32_t), /* proj_hour_val */
-                                      sizeof(uint32_t), /* proj_hour_val */
-                                      sizeof(uint32_t), /* proj_hour_val */
-                                      sizeof(uint32_t), /* proj_hour_val */
-                                      sizeof(uint32_t), /* proj_hour_val */
-                                      sizeof(uint32_t), /* proj_min_val */
-                                      sizeof(uint32_t), /* proj_min_val */
-                                      sizeof(uint32_t), /* proj_min_val */
-                                      sizeof(uint32_t), /* proj_min_val */
-                                      sizeof(uint32_t), /* proj_min_val */
-                                      sizeof(uint32_t), /* proj_min_val */
-                                      sizeof(uint32_t), /* proj_min_val */
-                                      sizeof(uint32_t), /* proj_min_val */
-                                      sizeof(uint32_t), /* proj_min_val */
-                                      sizeof(uint32_t)); /* proj_min_val */
+//    dict_size = dict_calc_buffer_size(1,
+//                                      sizeof(uint32_t), /* proj_time_val */
+//                                      sizeof(uint32_t), /* proj_time_val */
+//                                      sizeof(uint32_t), /* proj_time_val */
+//                                      sizeof(uint32_t), /* proj_time_val */
+//                                      sizeof(uint32_t), /* proj_time_val */
+//                                      sizeof(uint32_t), /* proj_time_val */
+//                                      sizeof(uint32_t), /* proj_time_val */
+//                                      sizeof(uint32_t), /* proj_time_val */
+//                                      sizeof(uint32_t), /* proj_time_val */
+//                                      sizeof(uint32_t), /* proj_time_val */
+//                                      sizeof(uint32_t), /* proj_run_val */
+//                                      sizeof(uint32_t), /* proj_run_val */
+//                                      sizeof(uint32_t), /* proj_run_val */
+//                                      sizeof(uint32_t), /* proj_run_val */
+//                                      sizeof(uint32_t), /* proj_run_val */
+//                                      sizeof(uint32_t), /* proj_run_val */
+//                                      sizeof(uint32_t), /* proj_run_val */
+//                                      sizeof(uint32_t), /* proj_run_val */
+//                                      sizeof(uint32_t), /* proj_run_val */
+//                                      sizeof(uint32_t), /* proj_run_val */
+//                                      sizeof(uint32_t), /* proj_start_val */
+//                                      sizeof(uint32_t), /* proj_start_val */
+//                                      sizeof(uint32_t), /* proj_start_val */
+//                                      sizeof(uint32_t), /* proj_start_val */
+//                                      sizeof(uint32_t), /* proj_start_val */
+//                                      sizeof(uint32_t), /* proj_start_val */
+//                                      sizeof(uint32_t), /* proj_start_val */
+//                                      sizeof(uint32_t), /* proj_start_val */
+//                                      sizeof(uint32_t), /* proj_start_val */
+//                                      sizeof(uint32_t), /* proj_start_val */
+//                                      MAX_PROJ_NAME_LEN, /* proj_names */
+//                                      MAX_PROJ_NAME_LEN, /* proj_names */
+//                                      MAX_PROJ_NAME_LEN, /* proj_names */
+//                                      MAX_PROJ_NAME_LEN, /* proj_names */
+//                                      MAX_PROJ_NAME_LEN, /* proj_names */
+//                                      MAX_PROJ_NAME_LEN, /* proj_names */
+//                                      MAX_PROJ_NAME_LEN, /* proj_names */
+//                                      MAX_PROJ_NAME_LEN, /* proj_names */
+//                                      MAX_PROJ_NAME_LEN, /* proj_names */
+//                                      MAX_PROJ_NAME_LEN, /* proj_names */
+//                                      sizeof(uint32_t), /* proj_hour_val */
+//                                      sizeof(uint32_t), /* proj_hour_val */
+//                                      sizeof(uint32_t), /* proj_hour_val */
+//                                      sizeof(uint32_t), /* proj_hour_val */
+//                                      sizeof(uint32_t), /* proj_hour_val */
+//                                      sizeof(uint32_t), /* proj_hour_val */
+//                                      sizeof(uint32_t), /* proj_hour_val */
+//                                      sizeof(uint32_t), /* proj_hour_val */
+//                                      sizeof(uint32_t), /* proj_hour_val */
+//                                      sizeof(uint32_t), /* proj_hour_val */
+//                                      sizeof(uint32_t), /* proj_min_val */
+//                                      sizeof(uint32_t), /* proj_min_val */
+//                                      sizeof(uint32_t), /* proj_min_val */
+//                                      sizeof(uint32_t), /* proj_min_val */
+//                                      sizeof(uint32_t), /* proj_min_val */
+//                                      sizeof(uint32_t), /* proj_min_val */
+//                                      sizeof(uint32_t), /* proj_min_val */
+//                                      sizeof(uint32_t), /* proj_min_val */
+//                                      sizeof(uint32_t), /* proj_min_val */
+//                                      sizeof(uint32_t)); /* proj_min_val */
 
     
-    app_log(APP_LOG_LEVEL_WARNING,
-	    __FILE__,
-	    __LINE__,	 
-	    "dict_size = %d\n", dict_size);
+//    app_log(APP_LOG_LEVEL_WARNING,
+//	    __FILE__,
+//	    __LINE__,	 
+//	    "dict_size = %d\n", dict_size);
 
-    app_message_open(dict_size, dict_size);
+  app_message_open(app_message_inbox_size_maximum(), app_message_outbox_size_maximum());
+//    app_message_open(dict_size, dict_size);
 
   update_configuration();
 

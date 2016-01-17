@@ -7,7 +7,7 @@
   ],
   "companyName": "raj",
   "versionCode": 1,
-  "versionLabel": "2.0",
+  "versionLabel": "2.1",
   "watchapp": {
     "watchface": false
   },
@@ -71,11 +71,11 @@
     "h9": 53,
     "h10": 54,
 
-    "m5": 55,
-    "m5": 56,
-    "m5": 57,
-    "m5": 58,
-    "m5": 59
+    "m6": 55,
+    "m7": 56,
+    "m8": 57,
+    "m9": 58,
+    "m10": 59
   },
   "resources": {
     "media": [
