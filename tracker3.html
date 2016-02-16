@@ -173,10 +173,10 @@
 		 type="number" value="" min="0" max="60">
 	  </input>
 <br>
-	  Only allow one project running at a time:<br>
+	  <label for="autostop">Only allow one project running at a time:</label>
 	  <select name="autostop" id="autostop" data-theme="" data-role="slider">
-	    <option value="1">Yes</option>
 	    <option value="0">No</option>
+	    <option value="1">Yes</option>
 	  </select>
 <br>	
 	</div>
@@ -322,9 +322,8 @@
           $("#m10").val(m10);
         }
         var autostop = decodeURIComponent($.urlParam("autostop"));
-        if (autostop != 0) {
-          $("#autostop").val(autostop);
-        }
+        $("#autostop").val(autostop).slider("refresh");
+
       }
 
       function saveOptions() {

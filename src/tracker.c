@@ -96,7 +96,13 @@ write_proj_change_info (void)
 	dict_write_cstring(iterator, proj_min_val[i], string);
     }
 
+    app_log(APP_LOG_LEVEL_WARNING,
+            __FILE__,
+            __LINE__,
+            "Writing autostop as %d", (int)autostop);
     stat = persist_write_int(AUTOSTOP, (uint32_t)autostop);
+    snprintf(string, sizeof(string), "%u", (uint)autostop);
+    dict_write_cstring(iterator, AUTOSTOP, string);
 
     app_message_outbox_send();
 
@@ -482,7 +488,7 @@ handle_msg_received (DictionaryIterator *received, void *context)
 
     tuple = dict_find(received, AUTOSTOP);
     if (tuple) {
-        autostop = (bool)tuple->value->int32;
+        autostop = (bool)atoi(tuple->value->cstring);
         app_log(APP_LOG_LEVEL_WARNING,
                 __FILE__,
                 __LINE__,
@@ -591,11 +597,11 @@ update_configuration (void)
 
     autostop = false;;
     if (persist_exists(AUTOSTOP)) {
-        bool val;
+        int val;
 	    
-        val = persist_read_bool(AUTOSTOP);
+        val = persist_read_int(AUTOSTOP);
         if (val) {
-            autostop = val;
+            autostop = (bool)val;
 		
             app_log(APP_LOG_LEVEL_WARNING,
                     __FILE__,

@@ -15,12 +15,19 @@ Pebble.addEventListener("showConfiguration", function()
 			    
 			    if (options !== null) {
 				url = url + '?';
+				if (typeof options.autostop == 'undefined') {
+				    url = url + 'autostop=0';
+                                    console.log("autostop is " + options.autostop);
+				} else {
+				    url = url + 'autostop=' + encodeURIComponent(options.autostop);
+                                    console.log("autostop is defined as " + options.autostop);
+				}
+				url = url + '&';
 				if (typeof options.name1 == 'undefined') {
 				    url = url + 'n1=';
 				} else {
 				    url = url + 'n1=' + encodeURIComponent(options.name1);
 				}
-				url = url + '&';
 				if (typeof options.name2 == 'undefined') {
 				    url = url + 'n2=';
 				} else {
@@ -139,7 +146,6 @@ Pebble.addEventListener("showConfiguration", function()
 				}
 
 
-
 				url = url + '&';
 				if (typeof options.min1 == 'undefined') {
 				    url = url + 'm1=';
@@ -201,11 +207,6 @@ Pebble.addEventListener("showConfiguration", function()
 				    url = url + 'm10=' + encodeURIComponent(options.m10);
 				}
 
-				if (typeof options.autostop == 'undefined') {
-				    url = url + 'autostop=0';
-				} else {
-				    url = url + 'autostop=' + encodeURIComponent(options.autostop);
-				}
 			    }
 			    console.log("url=" + url);
 			    Pebble.openURL(url);
