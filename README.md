@@ -1,4 +1,4 @@
-Pebble Tracker programm notes
+Pebble Tracker program notes
 =============================
 
 Simple time tracking program for up to five projects. You can edit the project names and times using "Settings" on the phone.
