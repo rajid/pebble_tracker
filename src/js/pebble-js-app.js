@@ -11,7 +11,7 @@ Pebble.addEventListener("showConfiguration", function()
 			    var options = JSON.parse(localStorage.getItem('options'));
 			    console.log("read options: " + JSON.stringify(options));
 			    console.log("showing configuration");
-			    var url='http://mischievous.us/tracker2.html';
+			    var url='http://mischievous.us/tracker3.html';
 			    
 			    if (options !== null) {
 				url = url + '?';
@@ -199,6 +199,12 @@ Pebble.addEventListener("showConfiguration", function()
 				    url = url + 'm10=';
 				} else {
 				    url = url + 'm10=' + encodeURIComponent(options.m10);
+				}
+
+				if (typeof options.autostop == 'undefined') {
+				    url = url + 'autostop=0';
+				} else {
+				    url = url + 'autostop=' + encodeURIComponent(options.autostop);
 				}
 			    }
 			    console.log("url=" + url);
